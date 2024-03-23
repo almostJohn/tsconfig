@@ -24,7 +24,7 @@ export function CopyConfigButton() {
 			onClick={handleClickCopy}
 			type="button"
 		>
-			<span className="font-semibold text-blurple">{">"}</span> copy tsconfig.json{" "}
+			<span className="font-semibold text-[#5865f2]">{">"}</span> copy tsconfig.json{" "}
 			{interacted ? (
 				<Check className="ml-1 inline-block h-4 w-4 text-green-500" />
 			) : (
