@@ -5,7 +5,7 @@ import { PageActions, PageHeader, PageHeaderDescription, PageHeaderHeading } fro
 
 export default function Page() {
 	return (
-		<main className="flex flex-col items-center justify-center p-4 mx-auto">
+		<main className="min-h-screen flex flex-col container max-w-7xl p-4 mx-auto">
 			<PageHeader>
 				<Announcement />
 				<PageHeaderHeading>
