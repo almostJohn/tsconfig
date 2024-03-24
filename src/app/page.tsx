@@ -1,10 +1,11 @@
 import * as React from "react";
 import Link from "next/link";
 import { Announcement } from "~/components/announcement";
-import { CopyConfigButton } from "~/components/copy-config-button";
+import { CopyTSConfig, CopyTSConfigEslint } from "~/components/copy-config-button";
 import { PageActions, PageHeader, PageHeaderDescription, PageHeaderHeading } from "~/components/page-header";
 import { cn } from "~/util/cn";
 import { ArrowUpRightIcon } from "lucide-react";
+import { buttonVariants } from "~/components/button";
 
 export default function Page() {
 	return (
@@ -12,7 +13,7 @@ export default function Page() {
 			<PageHeader>
 				<Announcement />
 				<PageHeaderHeading>
-					<span className="text-sky-600">TS</span>Config. Make it yours.
+					<span className="text-sky-600">TS</span>Config
 				</PageHeaderHeading>
 				<PageHeaderDescription>
 					Harness the power of TypeScript&apos;s robust features for building scalable applications. Whether you&apos;re
@@ -20,17 +21,14 @@ export default function Page() {
 					quality. Copy, paste, and unlock TypeScript&apos;s full potential in your development journey.
 				</PageHeaderDescription>
 				<PageActions>
-					<Link
-						href="https://github.com/almostJohn/tsconfig"
-						className={cn(
-							"inline-flex px-6 py-2 rounded-md items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-neutral-700 bg-transparent hover:bg-neutral-800 text-neutral-50",
-						)}
-					>
+					<Link href="https://github.com/almostJohn/tsconfig" className={cn(buttonVariants({ variant: "outline" }))}>
 						GitHub <ArrowUpRightIcon />
 					</Link>
 				</PageActions>
-				<div className="pt-4" />
-				<CopyConfigButton />
+				<div className="pt-2 flex flex-col items-center justify-center gap-4">
+					<CopyTSConfig />
+					<CopyTSConfigEslint />
+				</div>
 			</PageHeader>
 		</main>
 	);

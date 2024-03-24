@@ -7,15 +7,17 @@ export const tsConfig = {
 		noImplicitOverride: true,
 		noImplicitReturns: true,
 		noUnusedParameters: true,
+		noUnusedLocals: true,
 		strict: true,
 		useUnknownInCatchVariables: true,
 		noUncheckedIndexedAccess: true,
-		module: "ESNext",
-		moduleResolution: "Bundler",
+		module: "Node16",
+		moduleResolution: "Node16",
 		resolveJsonModule: true,
 		declaration: true,
 		declarationMap: true,
 		importHelpers: true,
+		verbatimModuleSyntax: true,
 		inlineSources: true,
 		newLine: "lf",
 		noEmitHelpers: true,
@@ -27,7 +29,7 @@ export const tsConfig = {
 		forceConsistentCasingInFileNames: true,
 		emitDecoratorMetadata: true,
 		experimentalDecorators: true,
-		lib: ["ESNext", "DOM", "DOM.Iterable"],
+		lib: ["ESNext"],
 		target: "ES2021",
 		useDefineForClassFields: true,
 		isolatedModules: true,
@@ -37,14 +39,28 @@ export const tsConfig = {
 		allowJs: false,
 		incremental: true,
 		skipLibCheck: true,
-		plugins: [
-			{
-				name: "next",
-			},
-		],
 	},
-	include: ["src/**/*.ts", "src/**/*.tsx", "next-env.d.ts", ".next/types/**/*.ts"],
+	include: ["src/**/*.ts"],
 	exclude: ["node_modules"],
 };
 
+export const tsConfigEslint = {
+	extends: "./tsconfig.json",
+	compilerOptions: {
+		allowJs: true,
+	},
+	include: [
+		"**/*.ts",
+		"**/*.tsx",
+		"**/*.js",
+		"**/*.jsx",
+		"**/*.test.ts",
+		"**/*.test.js",
+		"**/*.spec.ts",
+		"**/*.spec.js",
+	],
+	exclude: [],
+};
+
 export type TSConfig = typeof tsConfig;
+export type TSConfigEslint = typeof tsConfigEslint;
