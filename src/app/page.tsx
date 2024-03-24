@@ -23,7 +23,7 @@ export default function Page() {
 					<Link
 						href="https://github.com/almostJohn/tsconfig"
 						className={cn(
-							"inline-flex px-6 py-2 rounded-md items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-neutral-300 bg-neutral-50 hover:bg-neutral-200 dark:border-neutral-700 dark:bg-transparent dark:hover:bg-neutral-800",
+							"inline-flex px-6 py-2 rounded-md items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-neutral-700 bg-transparent hover:bg-neutral-800 text-neutral-50",
 						)}
 					>
 						GitHub <ArrowUpRightIcon />

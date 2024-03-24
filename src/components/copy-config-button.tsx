@@ -19,7 +19,7 @@ export function CopyConfigButton() {
 	return (
 		<button
 			className={cn(
-				"cursor-copy rounded-md border border-neutral-300 bg-neutral-50 px-4 py-2 font-mono hover:bg-neutral-200 dark:border-neutral-700 dark:bg-transparent dark:hover:bg-neutral-800 place-self-center",
+				"cursor-copy rounded-md border px-4 py-2 font-mono  border-neutral-700 dark:bg-transparent hover:bg-neutral-800 text-neutral-50 place-self-center",
 			)}
 			onClick={handleClickCopy}
 			type="button"
