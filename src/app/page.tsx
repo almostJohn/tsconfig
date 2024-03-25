@@ -1,7 +1,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { Announcement } from "~/components/announcement";
-import { CopyTSConfig, CopyTSConfigEslint } from "~/components/copy-config-button";
+import { CopyNodeJsTSConfig, CopyNextJsTSConfig, CopyTSConfigEslint } from "~/components/copy-config-button";
 import { PageActions, PageHeader, PageHeaderDescription, PageHeaderHeading } from "~/components/page-header";
 import { cn } from "~/util/cn";
 import { ArrowUpRightIcon } from "lucide-react";
@@ -25,9 +25,10 @@ export default function Page() {
 						GitHub <ArrowUpRightIcon />
 					</Link>
 				</PageActions>
-				<div className="pt-2 flex flex-col items-center justify-center gap-4">
-					<CopyTSConfig />
+				<div className="pt-3 flex flex-col items-center justify-center gap-4">
 					<CopyTSConfigEslint />
+					<CopyNextJsTSConfig />
+					<CopyNodeJsTSConfig />
 				</div>
 			</PageHeader>
 		</main>
