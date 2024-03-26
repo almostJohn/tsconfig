@@ -19,7 +19,7 @@ export function CopyNodeJsTSConfig() {
 	return (
 		<button
 			className={cn(
-				"cursor-copy rounded-md border px-4 py-2 font-mono  border-neutral-700 dark:bg-transparent hover:bg-neutral-800 text-neutral-50 place-self-center",
+				"cursor-copy rounded-md border px-4 py-2 font-mono  border-neutral-700 dark:bg-transparent hover:bg-neutral-800/90 text-neutral-50 place-self-center transition-colors",
 			)}
 			onClick={handleClickCopy}
 			type="button"
@@ -47,7 +47,7 @@ export function CopyNextJsTSConfig() {
 	return (
 		<button
 			className={cn(
-				"cursor-copy rounded-md border px-4 py-2 font-mono border-neutral-700 dark:bg-transparent hover:bg-neutral-800 text-neutral-50 place-self-center",
+				"cursor-copy rounded-md border px-4 py-2 font-mono border-neutral-700 dark:bg-transparent hover:bg-neutral-800/90 text-neutral-50 place-self-center transition-colors",
 			)}
 			onClick={handleClickCopy}
 			type="button"
@@ -75,7 +75,7 @@ export function CopyTSConfigEslint() {
 	return (
 		<button
 			className={cn(
-				"cursor-copy rounded-md border px-4 py-2 font-mono  border-neutral-700 dark:bg-transparent hover:bg-neutral-800 text-neutral-50 place-self-center",
+				"cursor-copy rounded-md border px-4 py-2 font-mono  border-neutral-700 dark:bg-transparent hover:bg-neutral-800/90 text-neutral-50 place-self-center transition-colors",
 			)}
 			onClick={handleClickCopy}
 			type="button"
