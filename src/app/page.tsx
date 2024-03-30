@@ -1,11 +1,7 @@
 import * as React from "react";
-import Link from "next/link";
 import { Announcement } from "~/components/announcement";
 import { CopyNodeJsTSConfig, CopyNextJsTSConfig, CopyTSConfigEslint } from "~/components/copy-config-button";
 import { PageActions, PageHeader, PageHeaderDescription, PageHeaderHeading } from "~/components/page-header";
-import { cn } from "~/util/cn";
-import { ArrowUpRightIcon } from "lucide-react";
-import { buttonVariants } from "~/components/button";
 
 export default function Page() {
 	return (
@@ -21,15 +17,10 @@ export default function Page() {
 					quality. Copy, paste, and unlock TypeScript&apos;s full potential in your development journey.
 				</PageHeaderDescription>
 				<PageActions>
-					<Link href="https://github.com/almostJohn/tsconfig" className={cn(buttonVariants({ variant: "outline" }))}>
-						GitHub <ArrowUpRightIcon />
-					</Link>
-				</PageActions>
-				<div className="pt-3 flex flex-col items-center justify-center gap-4">
 					<CopyTSConfigEslint />
 					<CopyNextJsTSConfig />
 					<CopyNodeJsTSConfig />
-				</div>
+				</PageActions>
 			</PageHeader>
 		</main>
 	);

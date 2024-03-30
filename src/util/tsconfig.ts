@@ -40,8 +40,8 @@ export const tsConfigNodeJs = {
 		incremental: true,
 		skipLibCheck: true,
 	},
-	include: ["src/**/*.ts"],
-	exclude: ["node_modules"],
+	include: ["**/*.ts", "**/*.tsx", "src/**/*.ts", "src/**/*.tsx", "next-env.d.ts", ".next/types/**/*.ts"],
+	exclude: ["node_modules"]
 };
 
 export const tsConfigNextJs = {
@@ -94,8 +94,8 @@ export const tsConfigNextJs = {
 			"~/*": ["./src/*"],
 		},
 	},
-	include: ["src/**/*.ts", "next-env.d.ts", ".next/types/**/*.ts"],
-	exclude: ["node_modules"],
+	include: ["**/*.ts", "**/*.tsx", "src/**/*.ts", "src/**/*.tsx", "next-env.d.ts", ".next/types/**/*.ts"],
+	exclude: ["node_modules"]
 };
 
 export const tsConfigEslint = {
@@ -113,7 +113,7 @@ export const tsConfigEslint = {
 		"**/*.spec.ts",
 		"**/*.spec.js",
 	],
-	exclude: [],
+	exclude: []
 };
 
 export type TSConfigNodeJs = typeof tsConfigNodeJs;

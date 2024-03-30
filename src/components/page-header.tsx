@@ -30,12 +30,12 @@ export function PageHeaderHeading({ className, ...props }: React.HTMLAttributes<
 export function PageHeaderDescription({ className, ...props }: React.HTMLAttributes<HTMLParagraphElement>) {
 	return (
 		<p
-			className={cn("max-w-[750px] text-center text-lg text-neutral-500 sm:text-xl text-balance", className)}
+			className={cn("max-w-[750px] text-center text-lg text-slate-500 sm:text-xl text-balance", className)}
 			{...props}
 		/>
 	);
 }
 
 export function PageActions({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
-	return <div className={cn("flex w-full items-center justify-center space-x-4 py-4 md:pb-0", className)} {...props} />;
+	return <div className={cn("flex flex-col w-full items-center justify-center gap-4 pt-5 md:flex-row", className)} {...props} />;
 }
