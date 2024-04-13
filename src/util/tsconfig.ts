@@ -1,4 +1,4 @@
-export const tsConfig: string = `{
+export const template: string = `{
 	"compilerOptions": {
 		"allowUnreachableCode": false,
 		"allowUnusedLabels": false,
@@ -28,7 +28,11 @@ export const tsConfig: string = `{
 		"forceConsistentCasingInFileNames": true,
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
-		"lib": ["ESNext", "DOM", "DOM.Iterable"],
+		"lib": [
+			"ESNext",
+			"DOM",
+			"DOM.Iterable"
+		],
 		"target": "ES2021",
 		"useDefineForClassFields": true,
 		"isolatedModules": true,
@@ -44,20 +48,18 @@ export const tsConfig: string = `{
 			}
 		],
 		"paths": {
-			"~/*": ["./src/*"]
+			"~/*": [
+				"./src/*"
+			]
 		}
 	},
-	"include": ["src/**/*.ts", "src/**/*.tsx", "next-env.d.ts", ".next/types/**/*.ts"],
+	"includes": [
+		"**/*.ts",
+		"**/*.tsx",
+		"src/**/*.ts",
+		"src/**/*.tsx",
+		"next-env.d.ts",
+		".next/types/**/*.ts"
+	],
 	"exclude": ["node_modules"]
-}
-`;
-
-export const tsConfigShort: string = `{
-	"compilerOptions": {
-		"allowUnreachableCode": false,
-		"allowUnusedLabels": false,
-		"exactOptionalPropertyTypes": true,
-		"noFallthroughCasesInSwitch": true
-		...
-	}
 }`;
