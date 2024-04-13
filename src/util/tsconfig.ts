@@ -53,7 +53,7 @@ export const template: string = `{
 			]
 		}
 	},
-	"includes": [
+	"include": [
 		"**/*.ts",
 		"**/*.tsx",
 		"src/**/*.ts",
