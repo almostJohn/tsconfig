@@ -1,29 +1,15 @@
-import * as React from "react";
+"use client";
+
 import type { Metadata, Viewport } from "next";
+import { inter, fontSans, jetBrainsMono } from "~/lib/fonts";
 import { Providers } from "./providers";
-import { inter, jetBrainsMono, fontSans } from "~/lib/fonts";
+import { siteConfig } from "~/config/site";
 import { cn } from "~/lib/utils";
-import { Navbar } from "~/components/Navbar";
-import { Toaster } from "~/components/ui/toaster";
 
 import "../styles/globals.css";
 
 export const metadata: Metadata = {
-	title: "tsconfig",
-	icons: {
-		other: [
-			{
-				url: "/tsconfig.svg",
-				sizes: "32x32",
-				type: "image/svg",
-			},
-			{
-				url: "/tsconfig.svg",
-				sizes: "16x16",
-				type: "image/svg",
-			},
-		],
-	},
+	title: siteConfig.title,
 };
 
 export const viewport: Viewport = {
@@ -33,7 +19,9 @@ export const viewport: Viewport = {
 	],
 };
 
-export default function RootLayout({ children }: React.PropsWithChildren) {
+export default function GlobalError({ error }: { readonly error: Error }) {
+	console.error(error);
+
 	return (
 		<html lang="en" suppressHydrationWarning>
 			<body
@@ -45,11 +33,10 @@ export default function RootLayout({ children }: React.PropsWithChildren) {
 				)}
 			>
 				<Providers>
-					<div className="relative min-h-screen flex flex-col">
-						<Navbar />
-						{children}
+					<div className="flex flex-1 flex-col items-center justify-center space-y-2 py-12 md:py-24 lg:py-32">
+						<h1 className="text-[6rem] font-bold leading-none tracking-tight md:text-[12rem] lg:[16rem]">500</h1>
+						<p className="text-center text-neutral-500 text-[3rem]">Error</p>
 					</div>
-					<Toaster />
 				</Providers>
 			</body>
 		</html>

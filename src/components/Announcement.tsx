@@ -8,7 +8,7 @@ export function Announcement() {
 	return (
 		<Link
 			href={siteConfig.links.typescriptWebsite}
-			className="inline-flex items-center rounded-lg bg-muted px-3 py-1 text-sm font-medium"
+			className="inline-flex items-center rounded-lg bg-neutral-200 dark:bg-neutral-800 shadow px-3 py-1 text-sm font-medium"
 		>
 			<Info className="h-4 w-4" /> <Separator className="mx-2 h-4" orientation="vertical" />{" "}
 			<span>Check out TypeScript</span>

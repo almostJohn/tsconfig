@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+	font-family: var(--font-geist-sans);
+	min-height: 100dvh;
+}
+
+code {
+	font-family: var(--font-mono);
+}
+
 @layer base {
 	:root {
 		--background: 0 0% 100%;
