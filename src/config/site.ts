@@ -11,3 +11,5 @@ export const siteConfig = {
 		github: "https://github.com/almostJohn/tsconfig",
 	},
 };
+
+export type SiteConfig = typeof siteConfig;

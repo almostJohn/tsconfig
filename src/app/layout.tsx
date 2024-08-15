@@ -1,15 +1,17 @@
-import * as React from "react";
+import type { PropsWithChildren } from "react";
 import type { Metadata, Viewport } from "next";
-import { Providers } from "./providers";
+import { Providers } from "~/app/providers";
 import { inter, jetBrainsMono, fontSans } from "~/lib/fonts";
 import { cn } from "~/lib/utils";
 import { Navbar } from "~/components/Navbar";
 import { Toaster } from "~/components/ui/toaster";
 
-import "../styles/globals.css";
+import "~/styles/globals.css";
+import { siteConfig } from "~/config/site";
 
 export const metadata: Metadata = {
-	title: "tsconfig",
+	title: siteConfig.title,
+	description: siteConfig.description,
 	icons: {
 		other: [
 			{
@@ -33,22 +35,22 @@ export const viewport: Viewport = {
 	],
 };
 
-export default function RootLayout({ children }: React.PropsWithChildren) {
+export default function RootLayout({ children }: PropsWithChildren) {
 	return (
 		<html lang="en" suppressHydrationWarning>
 			<body
 				className={cn(
-					"bg-neutral-100 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100 antialiased",
+					"min-h-screen bg-background text-foreground antialiased",
 					fontSans.variable,
 					inter.variable,
 					jetBrainsMono.variable,
 				)}
 			>
 				<Providers>
-					<div className="relative min-h-screen flex flex-col">
+					<section className="relative flex flex-col">
 						<Navbar />
 						{children}
-					</div>
+					</section>
 					<Toaster />
 				</Providers>
 			</body>

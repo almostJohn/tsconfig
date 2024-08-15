@@ -1,4 +1,3 @@
-import * as React from "react";
 import {
 	PageHeader,
 	PageHeaderBody,
@@ -7,7 +6,7 @@ import {
 	PageHeaderTitle,
 } from "~/components/PageHeader";
 import { ConfigCodeBlock } from "~/components/ConfigCodeBlock";
-import { Announcement } from "~/components/Announcement";
+import { Announcements } from "~/components/Announcements";
 
 export default function Page() {
 	return (
@@ -15,7 +14,7 @@ export default function Page() {
 			<PageHeader>
 				<PageHeaderContainer>
 					<PageHeaderBody>
-						<Announcement />
+						<Announcements />
 						<PageHeaderTitle>Build Your App with TypeScript</PageHeaderTitle>
 						<PageHeaderDescription>
 							A TypeScript configuration that you can copy and paste into your projects.

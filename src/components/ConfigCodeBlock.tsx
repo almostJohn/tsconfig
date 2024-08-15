@@ -1,21 +1,20 @@
 "use client";
 
-import * as React from "react";
+import { useState } from "react";
 import { Check, Copy } from "lucide-react";
 import { template } from "~/lib/tsconfig";
-import { buttonVariants } from "~/styles/button";
+import { buttonVariants } from "~/components/ui/button";
 import { cn } from "~/lib/utils";
 import { useToast } from "~/components/ui/use-toast";
 
 export function ConfigCodeBlock() {
 	const { toast } = useToast();
-	const [interacted, setInteracted] = React.useState(false);
+	const [interacted, setInteracted] = useState(false);
 
 	const handleCopy = (): void => {
 		navigator.clipboard.writeText(template).then(() => {
 			setInteracted(true);
 			toast({
-				className: "bg-neutral-100 dark:bg-neutral-900",
 				description: "Copied to clipboard",
 			});
 			setTimeout(() => {
