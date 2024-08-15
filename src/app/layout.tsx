@@ -5,9 +5,9 @@ import { inter, jetBrainsMono, fontSans } from "~/lib/fonts";
 import { cn } from "~/lib/utils";
 import { Navbar } from "~/components/Navbar";
 import { Toaster } from "~/components/ui/toaster";
+import { siteConfig } from "~/config/site";
 
 import "~/styles/globals.css";
-import { siteConfig } from "~/config/site";
 
 export const metadata: Metadata = {
 	title: siteConfig.title,
